@@ -1,0 +1,4 @@
+*IMPORTANTE*
+
+O projeto foi feito com ES Modules, portanto, a execução dos arquivos HTML precisam ser por meio de uma hospedagem local.
+É recomendável utilizar a extensão "Live Server" do VS Code para a execução, inicialize com o arquivo "homepage.html".

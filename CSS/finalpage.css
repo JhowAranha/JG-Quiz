@@ -1,0 +1,137 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap'); */
+@font-face {
+    font-family: "Cinzel";
+    src: url("../FONTE/Cinzel-VariableFont_wght.ttf");
+}
+
+* {
+    transition: all 1s;
+}
+
+body {
+    background-color: #784415;
+    font-family: 'Cinzel';
+}
+
+#mainDiv {
+    width: 60dvw;
+    height: 80dvh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgb(72, 33, 5);
+}
+
+#container {
+    background-color: #FFFAF4;
+    border-radius: 20px;
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#btnJogar {
+    width: 50%;
+    height: 10%;
+    text-align: center;
+    font-size: 2em;
+    border-radius: 20px;
+    background-color: black;
+    color: #FFFAF4;
+    font-family: 'Cinzel';
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnJogar:hover {
+    background-color: rgb(28, 28, 28);
+    transform: scale(1.05);
+    transition: all 1s;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+#text {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    text-align: center;
+    margin-bottom: 2rem; 
+}
+
+#bottom-props {
+    display: flex;
+    flex-direction: column;
+}
+
+#params {
+    display: flex;
+    gap: 2rem;
+}
+
+#difficulty {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    #mainDiv {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    #mainDiv div {
+        border-radius: 0;
+    }
+
+    #text {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: justify;
+    }
+
+    #btnJogar {
+        width: 20rem;
+        height: 5rem;
+        font-size: 1.5rem;
+    }
+
+    #bottom-props {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    #params {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #score, #time {
+        margin-bottom: 0;
+    }
+}

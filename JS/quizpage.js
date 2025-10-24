@@ -2,7 +2,7 @@ import Perguntas from "./perguntas.js";
 
 const perguntas = Perguntas()[localStorage.getItem("difficulty")];
 let perguntasDisponiveis = perguntas;
-console.log(perguntas);
+// console.log(perguntas);
 
 localStorage.setItem("score", 0);
 
@@ -17,6 +17,9 @@ let question;
 
 localStorage.setItem("time", 0);
 localStorage.setItem("score", 0);
+
+console.log(localStorage.getItem("difficulty"));
+
 
 const timeInterval = setInterval(() => {
     time++;
@@ -50,7 +53,7 @@ function validateAnswer(event) {
     }
 
     perguntasDisponiveis.splice(perguntasDisponiveis.indexOf(question), 1);
-    console.log(perguntasDisponiveis);
+    // console.log(perguntasDisponiveis);
     setTimeout(updateQuestion, 300);
 }
 
@@ -86,7 +89,7 @@ function updateQuestion(){
         alternativesDOM[i].addEventListener("click", validateAnswer);
     }
 
-    console.log(correctAlternative);
+    // console.log(correctAlternative);
 }
 
 updateQuestion();

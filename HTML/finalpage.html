@@ -3,33 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/finalpage.css">
+    <!-- <link rel="stylesheet" href="../CSS/finalpage.css"> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @font-face {
+            font-family: "Cinzel";
+            src: url("../FONTE/Cinzel-VariableFont_wght.ttf");
+        }
+
+        body {
+            font-family: 'Cinzel';
+        }
+    </style>
 
     <title>JG Quiz | Final</title>
 </head>
-<body>
-    <div id="mainDiv">
-        <div id="container">
-            <div id="text">Texto de parabenzação</div>
-            <div id="params">
-                <div style="display: flex; gap: 2rem;">
-                    <div>
-                        <h2>Sua pontuação:</h2>
-                        <p id="score" style="font-size: 2rem; margin-top: 0;">0/10</p>
-                    </div>
-                    <div>
-                        <h2>Tempo:</h2>
-                        <p id="time" style="font-size: 2rem; margin-top: 0;">00:00</p>
-                    </div>
+<body class="bg-[#FFF8E7] text-[#4B2E2E]">
+    <div id="mainDiv" class="flex flex-col m-4 gap-10">
+        <p id="congrats-title" class="font-bold text-center text-2xl">Título de parabenzação</p>
+        <p id="congrats-subtitle" class="text-center text-xl">Texto de parabenzação</p>
+        <p id="verse" class="font-bold text-center text-xl">Versículo</p>
+
+        <div id="params" class="m-auto flex flex-col">
+            <div class="flex gap-10">
+                <div>
+                    <h2 class="font-bold">Sua pontuação:</h2>
+                    <p id="score" class="text-3xl">0/10</p>
                 </div>
-                <div id="bottom-props">
-                    <h2>Dificuldade:</h2>
-                    <p id="difficulty" style="font-size: 2rem;"></p>
+                <div>
+                    <h2 class="font-bold">Tempo:</h2>
+                    <p id="time" class="text-3xl">00:00</p>
                 </div>
             </div>
-            
-            <a id="btnJogar" href="../index.html" >Jogar novamente</a>
+            <div class="m-auto">
+                <h2 class="font-bold">Dificuldade:</h2>
+                <p id="difficulty" class="text-3xl"></p>
+            </div>
         </div>
+        
+        <a id="btnJogar" href="../index.html" class="m-auto">
+            <button id="btnJogarMobile"
+                    class="bg-[#F4A261] w-60 rounded-sm border-[2px] border-[#8D5C4A] font-bold p-2 text-xl">
+                            Jogar Novamente
+            </button>
+        </a>
     </div>
     <script type="module" src="../JS/finalpage.js"></script>
 </body>

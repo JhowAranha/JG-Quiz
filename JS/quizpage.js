@@ -8,6 +8,7 @@ localStorage.setItem("score", 0);
 
 const alternativesDOM = document.getElementsByClassName("alternative");
 const numPageDOM = document.getElementById("numPage");
+const timerDOM = document.getElementById("timer");
 
 let buttonIsClicked = false;
 let correctAlternative = {};
@@ -23,6 +24,7 @@ console.log(localStorage.getItem("difficulty"));
 
 const timeInterval = setInterval(() => {
     time++;
+    timerDOM.innerText = secondsToHHMMSS(time)
 }, 1000);
 
 function secondsToHHMMSS(seconds) {
@@ -46,15 +48,16 @@ function validateAnswer(event) {
 
     const alternativeBtn = event.target;
     if (alternativeBtn.innerText == correctAlternative.alternativa) {
-        alternativeBtn.classList.add("correct");
+        alternativeBtn.classList.replace("bg-[#FCEBD5]", "bg-green-400");
+
         localStorage.setItem("score", parseInt(localStorage.getItem("score")) + 1);
     } else {
-        alternativeBtn.classList.add("incorrect");
+        alternativeBtn.classList.replace("bg-[#FCEBD5]", "bg-red-400");
     }
 
     perguntasDisponiveis.splice(perguntasDisponiveis.indexOf(question), 1);
     // console.log(perguntasDisponiveis);
-    setTimeout(updateQuestion, 300);
+    setTimeout(updateQuestion, 500);
 }
 
 
@@ -77,7 +80,8 @@ function updateQuestion(){
     questionDOM.innerText = question.questao;
 
     for (let i = 0; i < alternativesDOM.length; i++) {
-        alternativesDOM[i].classList.remove("correct", "incorrect");
+        alternativesDOM[i].classList.replace("bg-green-400", "bg-[#FCEBD5]");
+        alternativesDOM[i].classList.replace("bg-red-400", "bg-[#FCEBD5]");
 
         if (question.alternativas[i].certa) {
             correctAlternative = question.alternativas[i];
@@ -86,7 +90,7 @@ function updateQuestion(){
         alternativesDOM[i].id = "alternative" + i;
         alternativesDOM[i].innerText = question.alternativas[i].alternativa;
 
-        alternativesDOM[i].addEventListener("click", validateAnswer);
+        alternativesDOM[i].onclick = validateAnswer;
     }
 
     // console.log(correctAlternative);

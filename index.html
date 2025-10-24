@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./CSS/homepage.css">
+    <!-- <link rel="stylesheet" href="./CSS/homepage.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @font-face {
+            font-family: "Cinzel";
+            src: url("../FONTE/Cinzel-VariableFont_wght.ttf");
+        }
+
+        body {
+            font-family: 'Cinzel';
+        }
+    </style>
 
     <title>Quiz Bíblico</title>
 </head>
-<body>
-    <div id="home">
+<body class="bg-[#FFF8E7] text-[#4B2E2E]">
+    <div id="home" class="hidden">
         <div id="infoDiv">
             <div id="textDiv">
                 <br><br><h1 style="margin-left: 4%; font-size: 2.6rem;">Bem-vindo ao JG Quiz! 📖</h1>
@@ -37,19 +48,34 @@
     </div>
 
     <div id="homePhone">
-        <div id="jogarDiv">
-            <h1 id="titleJGQuiz" style="margin-top: 15%;">JG Quiz ✨</h1>
-            <select name="dificuldade" id="selectDificuldadeMobile">
-                <option value="" style="display: none;">Selecione a dificuldade</option>
-                <option value="facil">Fácil</option>
-                <option value="media">Média</option>
-                <option value="dificil">Difícil</option>
-            </select><br>
+        <div id="jogarDiv" class="flex flex-col gap-15">
+            <h1 id="titleJGQuiz" class="text-5xl text-center mt-10 font-bold">JG Quiz 📖</h1>
 
-            <button id="btnJogarMobile">Jogar</button><br><br>
-            <a href="./HTML/about.html" id="linkSobre" style="font-size: 1.1rem;">Sobre o JG Quiz</a>
+            <div id="infoDiv">
+                <div id="textDiv" class="text-center mx-4 text-sm">
+                    <p>Prepare-se para testar seus conhecimentos sobre a palavra de Deus em uma experiência divertida e desafiadora. São 3 níveis de dificuldade, cada um com 15 perguntas, que vão desde curiosidades simples até questões mais profundas.</p><br>
+                    <p>Será que você consegue acertar todas? Venha descobrir o quanto você sabe e se surpreenda com novos aprendizados a cada pergunta!</p><br>
+                    <p>Este quiz foi desenvolvido por Gabriel Monteiro e Jhonatan Oliveira, apaixonados por compartilhar conhecimento biblíco de forma interativa e envolvente.</p>
+                    <p>Entre nessa jornada, desafie-se e fortaleça ainda mais seu entendimento da Biblía!</p>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-4">
+                <select name="dificuldade" id="selectDificuldadeMobile"
+                        class="bg-[#FCEBD5] border-[2px] border-[#8D5C4A] rounded-sm w-60 text-center m-auto text-2xl p-2 font-bold">
+                    <option value="" style="display: none;">Selecione a dificuldade</option>
+                    <option value="facil">Fácil</option>
+                    <option value="media">Média</option>
+                    <option value="dificil">Difícil</option>
+                </select><br>
+
+                <button id="btnJogarMobile"
+                        class="bg-[#F4A261] w-60 rounded-sm border-[2px] border-[#8D5C4A] font-bold m-auto p-2 text-2xl">
+                            Jogar
+                </button><br><br>
+            </div>
         </div>
-        <img id="marcaPagina" src="./IMAGENS/marca_pagina.png" alt="Marca página">
+        <!-- <img id="marcaPagina" src="./IMAGENS/marca_pagina.png" alt="Marca página"> -->
     </div>
 
     <script type="module" src="./homepage.js"></script>

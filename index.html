@@ -38,37 +38,43 @@
 
     </style>
 
-    <title>Quiz Bíblico</title>
+    <title>JG Quiz Bíblico</title>
 </head>
-<body class="bg-bege color-black">
-    <div id="home" class="hidden">
-        <div id="infoDiv">
-            <div id="textDiv">
-                <br><br><h1 style="margin-left: 4%; font-size: 2.6rem;">Bem-vindo ao JG Quiz! 📖</h1>
-                <p>Prepare-se para testar seus conhecimentos sobre a palavra de Deus em uma experiência divertida e desafiadora. São 3 níveis de dificuldade, cada um com 10 perguntas, que vão desde curiosidades simples até questões mais profundas.</p>
-                <p>Será que você consegue acertar todas? Venha descobrir o quanto você sabe e se surpreenda com novos aprendizados a cada pergunta!</p>
-                <p>Este quiz foi desenvolvido por Gabriel Monteiro e Jhonatan Oliveira, apaixonados por compartilhar conhecimento biblíco de forma interativa e envolvente.</p>
-                <p>Entre nessa jornada, desafie-se e fortaleça ainda mais seu entendimento da Biblía!</p>
+<body class="bg-bege md:bg-amber-800 color-black p-4 flex flex-col align-middle">
+    <div class="hidden md:flex bg-amber-900 p-4 h-[42rem] rounded-xl w-full max-w-6xl absolute top-[50%] left-[50%]
+                translate-y-[-50%] translate-x-[-50%]">
+        <div class="bg-bege p-4 w-1/2 max-w-7xl p-8 rounded-xl gap-4 flex flex-col md:[&_p]:text-md xl:[&_p]:text-xl">
+            <h1 class="text-3xl font-bold">Bem-vindo ao JG Quiz! ✨</h1>
+            <p>Prepare-se para testar seus conhecimentos sobre a palavra de Deus em uma experiência divertida e desafiadora. São 3 níveis de dificuldade, cada um com 10 perguntas, que vão desde curiosidades simples até questões mais profundas.</p><br>
+            <p>Será que você consegue acertar todas? Venha descobrir o quanto você sabe e se surpreenda com novos aprendizados a cada pergunta!</p><br>
+            <p>Este quiz foi desenvolvido por Gabriel Monteiro e Jhonatan Oliveira, apaixonados por compartilhar conhecimento biblíco de forma interativa e envolvente.</p>
+            <p>Entre nessa jornada, desafie-se e fortaleça ainda mais seu entendimento da Biblía!</p>
+        </div>
+
+        <div class="bg-bege p-4 w-1/2 p-8 rounded-xl flex flex-col text-center">
+            <h1 id="titleJGQuiz" class="text-5xl font-bold">JG Quiz 📖</h1>
+
+            <div class="flex flex-col gap-4 my-auto">
+                <select name="dificuldade" id="selectDificuldadeDesktop"
+                        class="bg-bege-2 c-border rounded-sm w-80 text-center mx-auto text-xl h-16 p-2 font-bold [&_option]-">
+                    <option value="" class="hidden">Selecione a dificuldade</option>
+                    <option value="facil">Fácil</option>
+                    <option value="media">Média</option>
+                    <option value="dificil">Difícil</option>
+                </select><br>
+
+                <button id="btnJogarDesktop"
+                            class="bg-orange w-60 h-16 rounded-sm c-border font-bold mx-auto p-2 text-2xl">
+                                Jogar
+                </button>
             </div>
         </div>
 
-        <div id="jogarDiv">
-            <h1 id="titleJGQuiz" style="margin-top: 15%;">JG Quiz ✨</h1>
-            <select name="dificuldade" id="selectDificuldadeDesktop">
-                <option value="" style="display: none;">Selecione a dificuldade</option>
-                <option value="facil">Fácil</option>
-                <option value="media">Média</option>
-                <option value="dificil">Difícil</option>
-            </select><br>
-
-            <button id="btnJogarDesktop">Jogar</button>
-        </div>
-
-        <img id="marcaPaginaTopo" src="./IMAGENS/marca_pagina_topo.png" alt="Marca página">
-        <img id="marcaPagina" src="./IMAGENS/marca_pagina.png" alt="Marca página">
+        <!-- <img id="marcaPaginaTopo" src="./IMAGENS/marca_pagina_topo.png" alt="Marca página" class="absolute">
+        <img id="marcaPagina" src="./IMAGENS/marca_pagina.png" alt="Marca página" class="absolute"> -->
     </div>
 
-    <div id="homePhone">
+    <div id="homePhone" class="md:hidden">
         <div id="jogarDiv" class="flex flex-col gap-12">
             <h1 id="titleJGQuiz" class="text-5xl text-center mt-10 font-bold">JG Quiz 📖</h1>
 
@@ -93,7 +99,7 @@
                 <button id="btnJogarMobile"
                         class="bg-orange w-60 h-16 rounded-sm c-border font-bold m-auto p-2 text-2xl">
                             Jogar
-                </button><br><br>
+                </button>
             </div>
         </div>
         <!-- <img id="marcaPagina" src="./IMAGENS/marca_pagina.png" alt="Marca página"> -->

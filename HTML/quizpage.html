@@ -20,13 +20,14 @@
     <title>JG Quiz</title>
 </head>
 <body class="bg-[#FFF8E7] text-[#4B2E2E]">
-    <div id="mainDiv" class="flex flex-col gap-10">
+    <div id="mainDiv" class="flex flex-col gap-10 absolute top-[50%] left-[50%]
+                translate-y-[-50%] translate-x-[-50%]">
         <p id="numPage" class="text-3xl text-center mt-10 font-bold">1/10</p>
 
-        <div id="textContainer" class="flex flex-col gap-10">
-            <h1 id="question" class="text-center text-2xl h-20 mx-2">Questão</h1>
+        <div id="textContainer" class="flex flex-col gap-10 mx-auto">
+            <h1 id="question" class="text-center text-2xl h-12 mx-2">Questão</h1>
             <div id="alternatives"
-                class="flex flex-col [&_button]:w-80 gap-4 p-4 text-2xl [&_button]:border-[2px] [&_button]:border-[#8D5C4A] [&_button]:rounded-sm [&_button]:p-2 [&_button]:text-center [&_button]:m-auto">
+                class="flex flex-col [&_button]:w-80 gap-4 p-4 text-2xl [&_button]:border-[2px] [&_button]:border-[#8D5C4A] [&_button]:rounded-sm [&_button]:p-2 [&_button]:text-center [&_button]:mx-auto">
                 <button class="alternative bg-[#FCEBD5]">Alternativa 1</button>
                 <button class="alternative bg-[#FCEBD5]">Alternativa 2</button>
                 <button class="alternative bg-[#FCEBD5]">Alternativa 3</button>

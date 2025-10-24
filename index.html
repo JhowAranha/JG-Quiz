@@ -15,11 +15,32 @@
         body {
             font-family: 'Cinzel';
         }
+
+        .bg-bege {
+            background-color: #FFF8E7;
+        }
+
+        .bg-orange {
+            background-color: #F4A261;
+        }
+
+        .bg-bege-2 {
+            background-color: #FCEBD5;
+        }
+
+        .color-black {
+            color: #4B2E2E;
+        }
+
+        .c-border {
+            border: 2px solid #8D5C4A;
+        }
+
     </style>
 
     <title>Quiz Bíblico</title>
 </head>
-<body class="bg-[#FFF8E7] text-[#4B2E2E]">
+<body class="bg-bege color-black">
     <div id="home" class="hidden">
         <div id="infoDiv">
             <div id="textDiv">
@@ -62,7 +83,7 @@
 
             <div class="flex flex-col gap-4">
                 <select name="dificuldade" id="selectDificuldadeMobile"
-                        class="bg-[#FCEBD5] border-[2px] border-[#8D5C4A] rounded-sm w-60 text-center m-auto text-2xl p-2 font-bold">
+                        class="bg-bege-2 c-border rounded-sm w-60 text-center m-auto text-2xl p-2 font-bold">
                     <option value="" style="display: none;">Selecione a dificuldade</option>
                     <option value="facil">Fácil</option>
                     <option value="media">Média</option>
@@ -70,7 +91,7 @@
                 </select><br>
 
                 <button id="btnJogarMobile"
-                        class="bg-[#F4A261] w-60 rounded-sm border-[2px] border-[#8D5C4A] font-bold m-auto p-2 text-2xl">
+                        class="bg-orange w-60 rounded-sm c-border font-bold m-auto p-2 text-2xl">
                             Jogar
                 </button><br><br>
             </div>

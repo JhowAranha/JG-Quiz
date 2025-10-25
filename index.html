@@ -58,7 +58,7 @@
 
             <div class="flex flex-col gap-4 my-auto">
                 <select name="dificuldade" id="selectDificuldadeDesktop"
-                        class="bg-bege-2 c-border rounded-sm w-80 text-center mx-auto text-xl h-16 p-2 font-bold [&_option]-">
+                        class="bg-bege-2 c-border rounded-sm w-80 text-center mx-auto text-xl h-16 p-2 font-bold hover:scale-[1.05] transition-all">
                     <option value="" class="hidden">Selecione a dificuldade</option>
                     <option value="facil">Fácil</option>
                     <option value="media">Média</option>
@@ -66,14 +66,16 @@
                 </select><br>
 
                 <button id="btnJogarDesktop"
-                            class="bg-orange w-60 h-16 rounded-sm c-border font-bold mx-auto p-2 text-2xl">
+                            class="bg-orange w-60 h-16 rounded-sm c-border font-bold mx-auto p-2 text-2xl hover:scale-[1.05] transition-all">
                                 Jogar
                 </button>
             </div>
         </div>
 
-        <!-- <img id="marcaPaginaTopo" src="./IMAGENS/marca_pagina_topo.png" alt="Marca página" class="absolute">
-        <img id="marcaPagina" src="./IMAGENS/marca_pagina.png" alt="Marca página" class="absolute"> -->
+        <img id="marcaPaginaTopo" src="./IMAGENS/marca_pagina_topo.png" alt="Marca página" width="100"
+                class="absolute top-0 left-[50%] translate-x-[-50%]">
+        <img id="marcaPagina" src="./IMAGENS/marca_pagina.png" alt="Marca página" width="100"
+                class="absolute top-0 left-[50%] translate-x-[-50%] hover:translate-y-20 transition-all">
     </div>
 
     <div id="homePhone" class="md:hidden">
